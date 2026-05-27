@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Travel Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="badge">Google AI Studio + Gemini + Google Cloud</div>
+      <h1>AI Travel Planner</h1>
+      <p>Unesi osnovne podatke o putovanju i aplikacija će pomoću umjetne inteligencije generirati personalizirani plan izleta.</p>
+    </section>
+
+    <section class="planner-card">
+      <form id="travelForm">
+        <div class="grid">
+          <label>
+            Destinacija
+            <input id="destination" placeholder="npr. Rim" required />
+          </label>
+          <label>
+            Broj dana
+            <input id="days" type="number" min="1" max="14" value="3" required />
+          </label>
+          <label>
+            Budžet
+            <input id="budget" placeholder="npr. 500 €" required />
+          </label>
+          <label>
+            Stil putovanja
+            <select id="travelStyle">
+              <option>uravnoteženo</option>
+              <option>povoljno</option>
+              <option>luksuzno</option>
+              <option>obiteljski</option>
+              <option>aktivno</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          Interesi
+          <textarea id="interests" placeholder="npr. hrana, muzeji, znamenitosti, priroda"></textarea>
+        </label>
+        <button type="submit">Generiraj plan putovanja</button>
+      </form>
+    </section>
+
+    <section class="result-card">
+      <div class="result-header">
+        <h2>Generirani plan</h2>
+        <span id="status">Spremno za unos</span>
+      </div>
+      <pre id="result">Ovdje će se prikazati AI generirani plan putovanja.</pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
