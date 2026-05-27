@@ -30,7 +30,7 @@ form.addEventListener("submit", async (event) => {
       throw new Error(data.error || "Greška pri generiranju plana.");
     }
 
-    result.innerHTML = data.plan;
+    result.innerHTML = marked.parse(data.plan);
     statusEl.textContent = data.demo ? "Demo način rada" : "AI plan generiran";
   } catch (error) {
     result.innerHTML = error.message;
