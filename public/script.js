@@ -30,10 +30,10 @@ form.addEventListener("submit", async (event) => {
       throw new Error(data.error || "Greška pri generiranju plana.");
     }
 
-    result.textContent = data.plan;
+    result.innerHTML = data.plan;
     statusEl.textContent = data.demo ? "Demo način rada" : "AI plan generiran";
   } catch (error) {
-    result.textContent = error.message;
+    result.innerHTML = error.message;
     statusEl.textContent = "Greška";
   } finally {
     button.disabled = false;
