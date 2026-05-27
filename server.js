@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-const apiKey = "AIzaSyDRkACgJYaFy-sTrfVyWoiRt9IEYVJkJ9M";
+const apiKey = process.env.GEMINI_API_KEY;
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static("public"));
